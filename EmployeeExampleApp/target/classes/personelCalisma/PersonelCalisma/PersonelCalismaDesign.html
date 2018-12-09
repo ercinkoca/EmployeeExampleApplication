@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;mytheme&quot;}">
+  <meta name="vaadin-version" content="8.1.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout size-full>
+   <vaadin-horizontal-layout size-full :expand="0.4">
+    <vaadin-form-layout margin-left>
+     <vaadin-text-field caption="Adı Soyadı" width="60%" _id="txtAdSoyad"></vaadin-text-field>
+     <vaadin-combo-box caption="İl" width="60%" data-item-type="personelCalisma.PersonelCalisma.Iller" _id="cmbIller"></vaadin-combo-box>
+     <vaadin-combo-box caption="İlçe" width="60%" data-item-type="personelCalisma.PersonelCalisma.Ilceler" _id="cmbIlceler"></vaadin-combo-box>
+     <vaadin-radio-button-group caption="Cinsiyet" data-item-type="java.lang.Integer" _id="chksecim"></vaadin-radio-button-group>
+    </vaadin-form-layout>
+    <vaadin-form-layout margin-left>
+     <vaadin-date-field caption="Doğum Tarihi" width="30%" _id="dtDogumTarihi"></vaadin-date-field>
+     <vaadin-text-area caption="Açıklama" rows="3" width="60%" _id="txtAciklama"></vaadin-text-area>
+     <vaadin-button width="60%" plain-text _id="btnKaydet">
+       Personel Ekle 
+     </vaadin-button>
+    </vaadin-form-layout>
+   </vaadin-horizontal-layout>
+   <vaadin-vertical-layout size-full :expand="0.6">
+    <vaadin-grid size-full data-item-type="personelCalisma.PersonelCalisma.PersonelIsBasvurulari" _id="grdPersonel"></vaadin-grid>
+   </vaadin-vertical-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>
